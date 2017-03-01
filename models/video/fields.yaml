@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    yt_watch:
+        label: YouTube Video ID
+    name:
+        label: Caption
+    published:
+        label: Published
+        type: switch
+        default: true
