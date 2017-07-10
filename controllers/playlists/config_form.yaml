@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Playlist
+
+# Model Form Field configuration
+form: $/taema/youtubegallery/models/playlist/fields.yaml
+
+# Model Class name
+modelClass: Taema\Youtubegallery\Models\Playlist
+
+# Default redirect location
+defaultRedirect: taema/youtubegallery/playlists
+
+# Create page
+create:
+    title: Create Playlist
+    redirect: taema/youtubegallery/playlists/update/:id
+    redirectClose: taema/youtubegallery/playlists
+
+# Update page
+update:
+    title: Edit Playlist
+    redirect: taema/youtubegallery/playlists
+    redirectClose: taema/youtubegallery/playlists
+
+# Preview page
+preview:
+    title: Preview Playlist

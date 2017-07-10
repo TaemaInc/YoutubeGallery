@@ -18,7 +18,7 @@ defaultRedirect: taema/youtubegallery/videos
 create:
     title: Create Video
     redirect: taema/youtubegallery/videos/update/:id
-    redirectClose: mathieutanguay/youtubegallery/videos
+    redirectClose: taema/youtubegallery/videos
 
 # Update page
 update:

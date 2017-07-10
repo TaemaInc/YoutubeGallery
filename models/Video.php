@@ -3,16 +3,14 @@
 namespace Taema\Youtubegallery\Models;
 
 use Model;
-use October\Rain\Database\Traits\Sortable;
+use October\Rain\Database\Traits\Validation;
 
 /**
  * video Model
  */
 class Video extends Model
 {
-    use Sortable;
-
-    const SORT_ORDER = 'order';
+    use Validation;
 
     /**
      * @var string The database table used by the model.
@@ -27,7 +25,18 @@ class Video extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = ['name', 'yt_watch', 'published'];
+    protected $fillable = ['title', 'yt_watch', 'published'];
+
+    public $rules = [
+        'title' => 'required',
+        'yt_watch' => 'required',
+        'published' => 'boolean'
+    ];
+
+    public $attributeNames = [
+        'name' => 'taema.youtubegallery::lang.plugin.models.video.attributes.name',
+        'yt_watch' => 'taema.youtubegallery::lang.plugin.models.video.attributes.yt_watch'
+    ];
 
     /**
      * Tries to extract YouTube video id if a full YouTube url was given
@@ -51,7 +60,17 @@ class Video extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'playlists' => [
+            Playlist::class,
+            'table' => 'taema_youtubegallery_playlist_video'
+        ],
+        'playlists_count' => [
+            Playlist::class,
+            'table' => 'taema_youtubegallery_playlist_video',
+            'count' => true
+        ]
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

@@ -6,11 +6,11 @@ fields:
     id:
         label: ID
         disabled: true
+    title:
+        label: taema.youtubegallery::lang.plugin.models.video.fields.title
     yt_watch:
-        label: YouTube Video ID
-    name:
-        label: Caption
+        label: taema.youtubegallery::lang.plugin.models.video.fields.yt_watch
     published:
-        label: Published
+        label: taema.youtubegallery::lang.plugin.models.video.fields.published
         type: switch
         default: true

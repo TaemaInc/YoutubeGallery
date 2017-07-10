@@ -1,0 +1,12 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+playlists:
+    label: liste de lecture
+    view:
+        list: $/taema/youtubegallery/models/playlist/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        list: $/taema/youtubegallery/models/playlist/columns.yaml
+        recordsPerPage: 10

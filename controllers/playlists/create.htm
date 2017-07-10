@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('taema/youtubegallery/videos') ?>">Videos</a></li>
+        <li><a href="<?= Backend::url('taema/youtubegallery/playlists') ?>">Playlists</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -8,12 +8,9 @@
 <?php if (!$this->fatalError): ?>
 
     <?= Form::open(['class' => 'layout']) ?>
-        <div class="layout-row">
-            <?= $this->formRender() ?>
-        </div>
 
         <div class="layout-row">
-            <?= $this->relationRender('playlists') ?>
+            <?= $this->formRender() ?>
         </div>
 
         <div class="form-buttons">
@@ -22,7 +19,7 @@
                     type="submit"
                     data-request="onSave"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Creating video..."
+                    data-load-indicator="Creating Playlist..."
                     class="btn btn-primary">
                     Create
                 </button>
@@ -31,12 +28,12 @@
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Creating video..."
+                    data-load-indicator="Creating Playlist..."
                     class="btn btn-default">
                     Create and Close
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('taema/youtubegallery/videos') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('taema/youtubegallery/playlists') ?>">Cancel</a>
                 </span>
             </div>
         </div>
@@ -46,6 +43,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('taema/youtubegallery/videos') ?>" class="btn btn-default">Return to videos list</a></p>
+    <p><a href="<?= Backend::url('taema/youtubegallery/playlists') ?>" class="btn btn-default">Return to playlists list</a></p>
 
 <?php endif ?>

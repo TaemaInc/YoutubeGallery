@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+    name:
+        label: Name
+        searchable: true
+    videos_count:
+        label: Nb videos
+        relation: videos_count
+        valueFrom: count
+        default: 0

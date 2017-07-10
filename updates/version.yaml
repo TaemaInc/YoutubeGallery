@@ -1,4 +1,5 @@
 1.0.1:
 - First version of youtubegallery
-- create_galleries_table.php
 - create_videos_table.php
+- create_playlists_table.php
+- create_playlist_video_table.php

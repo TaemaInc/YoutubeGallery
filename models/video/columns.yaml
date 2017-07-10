@@ -6,11 +6,12 @@ columns:
     id:
         label: ID
         searchable: true
-    name:
-        label: Name
+    title:
+        label: taema.youtubegallery::lang.plugin.models.video.columns.title
+        searchable: true
+    yt_watch:
+        label: taema.youtubegallery::lang.plugin.models.video.columns.yt_watch
         searchable: true
     published:
-        label: Published
+        label: taema.youtubegallery::lang.plugin.models.video.columns.published
         type: switch
-    order:
-        label: Order
