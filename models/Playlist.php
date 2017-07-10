@@ -4,6 +4,9 @@ use Model;
 
 /**
  * Playlist Model
+ *
+ * @property Video[] $videos;
+ * @property int $videos_count
  */
 class Playlist extends Model
 {
@@ -20,7 +23,7 @@ class Playlist extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['name'];
 
     /**
      * @var array Relations

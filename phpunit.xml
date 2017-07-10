@@ -21,4 +21,13 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
     </php>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./</directory>
+            <exclude>
+                <directory suffix=".php">./tests</directory>
+                <file>/path/to/file</file>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>

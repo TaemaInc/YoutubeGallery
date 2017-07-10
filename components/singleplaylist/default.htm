@@ -1,0 +1,17 @@
+{% for row in __SELF__.videos | batch(2) %}
+
+<h2 class="playlist-name">{{ __SELF__.name }}</h2>
+<div class="row">
+    {% for video in row %}
+    <div class="col-sm-6">
+        <div class="videoTitle">
+            {% if __SELF__.property('display_title') %}
+            <h3>{{ video.title }}</h3>
+            {% endif %}
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ video.yt_watch }}" allowfullscreen></iframe>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endfor %}

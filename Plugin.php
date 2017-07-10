@@ -53,7 +53,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Taema\Youtubegallery\Components\VideoList' => 'VideoList',
+            'Taema\Youtubegallery\Components\SinglePlaylist' => 'Playlist',
         ];
     }
 

@@ -24,6 +24,10 @@ class VideoTest extends PluginTestCase
     {
         return [
             ['http://www.youtube.com/watch?v=vpiMAaPTze8', 'vpiMAaPTze8'],
+        ];
+
+        return [
+            ['http://www.youtube.com/watch?v=vpiMAaPTze8', 'vpiMAaPTze8'],
             ['http://youtu.be/l_la5XiQJdk', 'l_la5XiQJdk'],
             ['http://youtu.be/NLqAF9hrVbY', 'NLqAF9hrVbY'],
             ['https://youtu.be/qT47KF5pvfw', 'qT47KF5pvfw'],
