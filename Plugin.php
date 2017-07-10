@@ -1,4 +1,6 @@
-<?php namespace Mathieutanguay\Youtubegallery;
+<?php
+
+namespace Taema\Youtubegallery;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -18,7 +20,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'YouTube Video Gallery',
             'description' => 'Make galleries out of YouTube videos instead of pictures',
-            'author'      => 'mathieutanguay',
+            'author'      => 'Taema Inc.',
             'icon'        => 'fa-youtube-play'
         ];
     }
@@ -51,7 +53,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Mathieutanguay\Youtubegallery\Components\VideoList' => 'VideoList',
+            'Taema\Youtubegallery\Components\VideoList' => 'VideoList',
         ];
     }
 
@@ -65,7 +67,7 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'mathieutanguay.youtubegallery.some_permission' => [
+            'taema.youtubegallery.some_permission' => [
                 'tab' => 'youtubegallery',
                 'label' => 'Some permission'
             ],
@@ -81,11 +83,25 @@ class Plugin extends PluginBase
     {
         return [
             'youtubegallery' => [
-                'label'       => 'YT Gallery',
-                'url'         => Backend::url('mathieutanguay/youtubegallery/videos'),
+                'label'       => 'taema.youtubegallery::lang.plugin.navigation.label',
+                'url'         => Backend::url('taema/youtubegallery/videos'),
                 'icon'        => 'icon-youtube-play',
-                'permissions' => ['mathieutanguay.youtubegallery.*'],
+                'permissions' => ['taema.youtubegallery.*'],
                 'order'       => 500,
+                'sideMenu' => [
+                    'videos' => [
+                        'label' => 'taema.youtubegallery::lang.plugin.navigation.sidemenu.videos.label',
+                        'icon' => 'icon-video-camera',
+                        'url' => Backend::url('taema/youtubegallery/videos'),
+                        'permissions' => ['taema.youtubegallery.access_videos']
+                    ],
+                    'playlists' => [
+                        'label' => 'taema.youtubegallery::lang.plugin.navigation.sidemenu.playlists.label',
+                        'icon' => 'icon-list',
+                        'url' => Backend::url('taema/youtubegallery/playlists'),
+                        'permissions' => ['taema.youtubegallery.access_playlists']
+                    ]
+                ]
             ],
         ];
     }

@@ -6,25 +6,25 @@
 name: Video
 
 # Model Form Field configuration
-form: $/mathieutanguay/youtubegallery/models/video/fields.yaml
+form: $/taema/youtubegallery/models/video/fields.yaml
 
 # Model Class name
-modelClass: Mathieutanguay\Youtubegallery\Models\Video
+modelClass: Taema\Youtubegallery\Models\Video
 
 # Default redirect location
-defaultRedirect: mathieutanguay/youtubegallery/videos
+defaultRedirect: taema/youtubegallery/videos
 
 # Create page
 create:
     title: Create Video
-    redirect: mathieutanguay/youtubegallery/videos/update/:id
+    redirect: taema/youtubegallery/videos/update/:id
     redirectClose: mathieutanguay/youtubegallery/videos
 
 # Update page
 update:
     title: Edit Video
-    redirect: mathieutanguay/youtubegallery/videos
-    redirectClose: mathieutanguay/youtubegallery/videos
+    redirect: taema/youtubegallery/videos
+    redirectClose: taema/youtubegallery/videos
 
 # Preview page
 preview:

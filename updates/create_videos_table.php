@@ -1,4 +1,6 @@
-<?php namespace Mathieutanguay\Youtubegallery\Updates;
+<?php
+
+namespace Taema\Youtubegallery\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
@@ -8,7 +10,7 @@ class CreateVideosTable extends Migration
 {
     public function up()
     {
-        Schema::create('mathieutanguay_youtubegallery_videos', function(Blueprint $table) {
+        Schema::create('taema_youtubegallery_videos', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
@@ -21,6 +23,6 @@ class CreateVideosTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('mathieutanguay_youtubegallery_videos');
+        Schema::dropIfExists('taema_youtubegallery_videos');
     }
 }

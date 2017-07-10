@@ -1,4 +1,6 @@
-<?php namespace Mathieutanguay\Youtubegallery\Controllers;
+<?php
+
+namespace Taema\Youtubegallery\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -22,6 +24,6 @@ class Videos extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Mathieutanguay.Youtubegallery', 'youtubegallery', 'videos');
+        BackendMenu::setContext('Taema.Youtubegallery', 'youtubegallery', 'videos');
     }
 }

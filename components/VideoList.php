@@ -1,7 +1,7 @@
-<?php namespace Mathieutanguay\Youtubegallery\Components;
+<?php namespace Taema\Youtubegallery\Components;
 
 use Cms\Classes\ComponentBase;
-use Mathieutanguay\Youtubegallery\Models\Video;
+use Taema\Youtubegallery\Models\Video;
 
 class VideoList extends ComponentBase
 {

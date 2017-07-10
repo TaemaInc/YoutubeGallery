@@ -9,7 +9,7 @@ title: Reorder Categories
 nameFrom: name
 
 # Model Class name
-modelClass: \Mathieutanguay\Youtubegallery\Models\Video
+modelClass: \Taema\Youtubegallery\Models\Video
 
 # Toolbar widget configuration
 toolbar:
