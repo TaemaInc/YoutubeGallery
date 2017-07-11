@@ -17,6 +17,10 @@ class Video extends Model
      */
     public $table = 'taema_youtubegallery_videos';
 
+    public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
+
+    public $translatable = ['title'];
+
     /**
      * @var array Guarded fields
      */
@@ -34,7 +38,7 @@ class Video extends Model
     ];
 
     public $attributeNames = [
-        'name' => 'taema.youtubegallery::lang.plugin.models.video.attributes.name',
+        'title' => 'taema.youtubegallery::lang.plugin.models.video.attributes.title',
         'yt_watch' => 'taema.youtubegallery::lang.plugin.models.video.attributes.yt_watch'
     ];
 

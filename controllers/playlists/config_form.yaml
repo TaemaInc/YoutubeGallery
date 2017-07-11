@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Playlist
+name: taema.youtubegallery::lang.plugin.controllers.playlists.name
 
 # Model Form Field configuration
 form: $/taema/youtubegallery/models/playlist/fields.yaml
@@ -16,13 +16,13 @@ defaultRedirect: taema/youtubegallery/playlists
 
 # Create page
 create:
-    title: Create Playlist
+    title: taema.youtubegallery::lang.plugin.controllers.playlists.create.title
     redirect: taema/youtubegallery/playlists/update/:id
     redirectClose: taema/youtubegallery/playlists
 
 # Update page
 update:
-    title: Edit Playlist
+    title: taema.youtubegallery::lang.plugin.controllers.playlists.update.title
     redirect: taema/youtubegallery/playlists
     redirectClose: taema/youtubegallery/playlists
 

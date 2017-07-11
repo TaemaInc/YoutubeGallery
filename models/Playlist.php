@@ -1,6 +1,7 @@
 <?php namespace Taema\Youtubegallery\Models;
 
 use Model;
+use October\Rain\Database\Traits\Validation;
 
 /**
  * Playlist Model
@@ -10,10 +11,16 @@ use Model;
  */
 class Playlist extends Model
 {
+    use Validation;
+
     /**
      * @var string The database table used by the model.
      */
     public $table = 'taema_youtubegallery_playlists';
+
+    public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
+
+    public $translatable = ['name'];
 
     /**
      * @var array Guarded fields
@@ -24,6 +31,14 @@ class Playlist extends Model
      * @var array Fillable fields
      */
     protected $fillable = ['name'];
+
+    public $rules = [
+        'name' => 'required',
+    ];
+
+    public $attributeNames = [
+        'name' => 'taema.youtubegallery::lang.plugin.models.playlist.attributes.name',
+    ];
 
     /**
      * @var array Relations

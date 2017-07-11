@@ -15,3 +15,9 @@ columns:
     published:
         label: taema.youtubegallery::lang.plugin.models.video.columns.published
         type: switch
+    created_at:
+        label: taema.youtubegallery::lang.common.created_at
+        type: datetime
+    updated_at:
+        label: taema.youtubegallery::lang.common.updated_at
+        type: datetime

@@ -6,10 +6,16 @@ columns:
     id:
         label: ID
     name:
-        label: Name
+        label: taema.youtubegallery::lang.plugin.models.playlist.columns.name
         searchable: true
     videos_count:
-        label: Nb videos
+        label: taema.youtubegallery::lang.plugin.models.playlist.columns.video_count
         relation: videos_count
         valueFrom: count
         default: 0
+    created_at:
+        label: taema.youtubegallery::lang.common.created_at
+        type: datetime
+    updated_at:
+        label: taema.youtubegallery::lang.common.updated_at
+        type: datetime

@@ -6,5 +6,7 @@ fields:
     id:
         label: ID
         disabled: true
+        span: left
     name:
-        label: Name
+        label: taema.youtubegallery::lang.plugin.models.playlist.fields.name
+        span: left

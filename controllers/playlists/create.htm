@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('taema/youtubegallery/playlists') ?>">Playlists</a></li>
+        <li><a href="<?= Backend::url('taema/youtubegallery/playlists') ?>"><?= e(trans('taema.youtubegallery::lang.plugin.controllers.playlists.breadcrumbs')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -8,7 +8,6 @@
 <?php if (!$this->fatalError): ?>
 
     <?= Form::open(['class' => 'layout']) ?>
-
         <div class="layout-row">
             <?= $this->formRender() ?>
         </div>
@@ -25,7 +24,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Creating Playlist..."
                     class="btn btn-primary">
-                    Create
+                    <?= e(trans('taema.youtubegallery::lang.common.create')) ?>
                 </button>
                 <button
                     type="button"
@@ -34,10 +33,10 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Creating Playlist..."
                     class="btn btn-default">
-                    Create and Close
+                    <?= e(trans('taema.youtubegallery::lang.common.create_and_close')) ?>
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('taema/youtubegallery/playlists') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('taema/youtubegallery/playlists') ?>"><?= e(trans('taema.youtubegallery::lang.common.cancel')) ?></a>
                 </span>
             </div>
         </div>
@@ -47,6 +46,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('taema/youtubegallery/playlists') ?>" class="btn btn-default">Return to playlists list</a></p>
+    <p><a href="<?= Backend::url('taema/youtubegallery/playlists') ?>" class="btn btn-default"><?= e(trans('taema.youtubegallery::lang.plugin.controllers.playlists.create.return')) ?></a></p>
 
 <?php endif ?>

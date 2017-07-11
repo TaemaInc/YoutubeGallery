@@ -6,10 +6,13 @@ fields:
     id:
         label: ID
         disabled: true
+        span: left
     title:
         label: taema.youtubegallery::lang.plugin.models.video.fields.title
+        span: left
     yt_watch:
         label: taema.youtubegallery::lang.plugin.models.video.fields.yt_watch
+        span: left
     published:
         label: taema.youtubegallery::lang.plugin.models.video.fields.published
         type: switch
