@@ -26,6 +26,9 @@ return [
             'videos' => [
                 'name' => 'Vidéo',
                 'breadcrumbs' => 'Vidéos',
+                'relation' => [
+                    'label' => 'vidéo'
+                ],
                 'list_toolbar' => [
                     'new' => 'Nouvelle vidéo'
                 ],
@@ -40,6 +43,9 @@ return [
             'playlists' => [
                 'name' => 'Liste de lecture',
                 'breadcrumbs' => 'Listes de lecture',
+                'relation' => [
+                    'label' => 'liste de lecture'
+                ],
                 'list_toolbar' => [
                     'new' => 'Nouvelle liste de lecture'
                 ],

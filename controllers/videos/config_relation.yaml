@@ -3,7 +3,7 @@
 # ===================================
 
 playlists:
-    label: liste de lecture
+    label: taema.youtubegallery::lang.plugin.controllers.playlists.relation.label
     view:
         list: $/taema/youtubegallery/models/playlist/columns.yaml
         toolbarButtons: add|remove

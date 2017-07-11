@@ -26,6 +26,9 @@ return [
             'videos' => [
                 'name' => 'Video',
                 'breadcrumbs' => 'Videos',
+                'relation' => [
+                    'label' => 'video'
+                ],
                 'list_toolbar' => [
                     'new' => 'New Video'
                 ],
@@ -34,12 +37,15 @@ return [
                     'return' => 'Return to videos list'
                 ],
                 'update' => [
-                    'tile' => 'Edit Video'
+                    'title' => 'Edit Video'
                 ]
             ],
             'playlists' => [
                 'name' => 'Playlist',
                 'breadcrumbs' => 'Playlists',
+                'relation' => [
+                    'label' => 'playlist'
+                ],
                 'list_toolbar' => [
                     'new' => 'New Playlist'
                 ],
@@ -48,7 +54,7 @@ return [
                     'return' => 'Return to playlists'
                 ],
                 'update' => [
-                    'tile' => 'Edit Playlist'
+                    'title' => 'Edit Playlist'
                 ]
             ]
         ],
