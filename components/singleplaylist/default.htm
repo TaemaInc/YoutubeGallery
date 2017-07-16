@@ -1,9 +1,13 @@
 {% if __SELF__.hasError %}
     {% partial '@error' message="Video gallery is unavailable" %}
 {% else %}
-    {% for row in __SELF__.videos | batch(2) %}
 
-    <h2 class="playlist-name">{{ __SELF__.name }}</h2>
+    <div class="row">
+        <div class="col-sm-12 text-center" style="padding-bottom: 30px">
+            <h2 class="playlist-name">{{ __SELF__.name }}</h2>
+        </div>
+    </div>
+    {% for row in __SELF__.videos | batch(2) %}
     <div class="row">
         {% for video in row %}
         <div class="col-sm-6">
