@@ -13,6 +13,11 @@ fields:
     yt_watch:
         label: taema.youtubegallery::lang.plugin.models.video.fields.yt_watch
         span: left
+    order:
+        label: taema.youtubegallery::lang.plugin.models.video.fields.order
+        type: number
+        span: left
+        default: 50
     published:
         label: taema.youtubegallery::lang.plugin.models.video.fields.published
         type: switch

@@ -3,9 +3,8 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+    order:
+        label: taema.youtubegallery::lang.plugin.models.video.columns.order
     title:
         label: taema.youtubegallery::lang.plugin.models.video.columns.title
         searchable: true

@@ -63,12 +63,14 @@ return [
                 'columns' => [
                     'title' => 'Titre',
                     'yt_watch' => 'ID vidéo YouTube',
-                    'published' => 'Publiée'
+                    'published' => 'Publiée',
+                    'Order' => 'Ordre'
                 ],
                 'fields' => [
                     'title' => 'Titre du vidéo',
                     'yt_watch' => 'ID vidéo YouTube',
-                    'published' => 'Publiée'
+                    'published' => 'Publiée',
+                    'order' => 'Video display priority in playlists'
                 ],
                 'attributes' => [
                     'title' => 'titre',

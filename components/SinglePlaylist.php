@@ -12,6 +12,9 @@ class SinglePlaylist extends ComponentBase
     /** @var string */
     public $name;
 
+    /** @var bool */
+    public $hasError = false;
+
     public function componentDetails()
     {
         return [
@@ -34,6 +37,29 @@ class SinglePlaylist extends ComponentBase
                 'description' => 'Add the provided display title on top of the video',
                 'type' => 'checkbox',
                 'default' => false
+            ],
+            'sort_by' => [
+                'title' => 'Sort column',
+                'description' => 'Choose a column to sort on',
+                'type' => 'dropdown',
+                'required' => true,
+                'default' => 'order',
+                'options' => [
+                    'title' => 'Title',
+                    'order' => 'Order',
+                    'created_at' => 'Date of creation',
+                    'updated_at' => 'Date of modification'
+                ]
+            ],
+            'sort_direction' => [
+                'title' => 'Sort direction',
+                'description' => 'Ascending or descending sort',
+                'type' => 'dropdown',
+                'default' => 'asc',
+                'options' => [
+                    'asc' => 'Ascending',
+                    'desc' => 'Descending'
+                ]
             ]
         ];
     }
@@ -51,7 +77,15 @@ class SinglePlaylist extends ComponentBase
     public function onRun()
     {
         $playlist = Playlist::find($this->property('playlist'));
-        $this->name = $playlist->name;
-        $this->videos = $playlist->videos()->where('published', true)->get();
+        if ($playlist) {
+            $this->name = $playlist->name;
+            $this->videos = $playlist->videos()->where('published', true)->orderBy(
+                $this->property('sort_by'),
+                $this->property('sort_direction')
+            )->get();
+            return;
+        }
+
+        $this->hasError = true;
     }
 }

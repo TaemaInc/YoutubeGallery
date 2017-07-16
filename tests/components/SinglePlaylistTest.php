@@ -73,4 +73,14 @@ class SinglePlaylistTest extends PluginTestCase
 
         $this->assertCount(1, $options);
     }
+
+    /**
+     * @test
+     */
+    public function properly_sets_error_true_when_cant_find_gallery()
+    {
+        $videoList = new SinglePlaylist();
+
+        $videoList->onRun();
+    }
 }

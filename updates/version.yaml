@@ -3,3 +3,4 @@
 - create_videos_table.php
 - create_playlists_table.php
 - create_playlist_video_table.php
+1.0.2: Added video order display priority
