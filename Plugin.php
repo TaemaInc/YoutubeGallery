@@ -21,28 +21,8 @@ class Plugin extends PluginBase
             'name'        => 'YouTube Video Gallery',
             'description' => 'Make galleries out of YouTube videos instead of pictures',
             'author'      => 'Taema Inc.',
-            'icon'        => 'fa-youtube-play'
+            'icon'        => 'icon-youtube-play'
         ];
-    }
-
-    /**
-     * Register method, called when the plugin is first registered.
-     *
-     * @return void
-     */
-    public function register()
-    {
-
-    }
-
-    /**
-     * Boot method, called right before the request route.
-     *
-     * @return array
-     */
-    public function boot()
-    {
-
     }
 
     /**
@@ -64,14 +44,7 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
-        return [
-            'taema.youtubegallery.some_permission' => [
-                'tab' => 'youtubegallery',
-                'label' => 'Some permission'
-            ],
-        ];
+        return [];
     }
 
     /**

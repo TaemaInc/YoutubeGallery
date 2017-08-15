@@ -38,6 +38,12 @@ class SinglePlaylist extends ComponentBase
                 'type' => 'checkbox',
                 'default' => false
             ],
+            'display_playlist_name' => [
+                'title' => 'Display playlist name',
+                'description' => 'If checked, will display the playlist name on a row before all videos',
+                'type' => 'checkbox',
+                'default' => true
+            ],
             'sort_by' => [
                 'title' => 'Sort column',
                 'description' => 'Choose a column to sort on',

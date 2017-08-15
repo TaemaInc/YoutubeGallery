@@ -2,10 +2,10 @@
 
 namespace Taema\Youtubegallery\Tests\Models;
 
+use Illuminate\Foundation\Testing\TestCase;
 use Taema\Youtubegallery\Models\Video;
-use PluginTestCase;
 
-class VideoTest extends PluginTestCase
+class VideoTest extends TestCase
 {
     /**
      * @test
@@ -119,5 +119,17 @@ class VideoTest extends PluginTestCase
             ['youtu.be/DFYRQ_zQ-gk', 'DFYRQ_zQ-gk'],
             ['https://www.youtube.com/HamdiKickProduction?v=DFYRQ_zQ-gk', 'DFYRQ_zQ-gk'],
         ];
+    }
+
+    /**
+     * Creates the application.
+     *
+     * Needs to be implemented by subclasses.
+     *
+     * @return \Symfony\Component\HttpKernel\HttpKernelInterface
+     */
+    public function createApplication()
+    {
+        // Do nothing
     }
 }
