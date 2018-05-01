@@ -44,7 +44,22 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return [];
+        $tab = 'YouTube Video Gallery';
+
+        return [
+            'taema.youtubegallery.tab' => [
+                'label' => 'Show the YouTube Video Gallery tab in the backend',
+                'tab' => $tab
+            ],
+            'taema.youtubegallery.access_videos' => [
+                'label' => 'Access to the video section',
+                'tab' => $tab
+            ],
+            'taema.youtubegallery.access_playlists' => [
+                'label' => 'Access to the playlist section',
+                'tab' => $tab
+            ]
+        ];
     }
 
     /**
@@ -59,7 +74,7 @@ class Plugin extends PluginBase
                 'label'       => 'taema.youtubegallery::lang.plugin.navigation.label',
                 'url'         => Backend::url('taema/youtubegallery/videos'),
                 'icon'        => 'icon-youtube-play',
-                'permissions' => ['taema.youtubegallery.*'],
+                'permissions' => ['taema.youtubegallery.tab'],
                 'order'       => 500,
                 'sideMenu' => [
                     'videos' => [
